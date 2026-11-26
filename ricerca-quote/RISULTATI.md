@@ -11,7 +11,7 @@ infrasettimanali) e una di chiusura, per fino a 11 bookmaker.
 2025-26 e mancano nella stagione in corso. Per il periodo recente (dal 2024-25, 7.407 partite) si usa
 l'exchange Betfair.
 
-Le tabelle complete sono in [`tabelle_fase1.md`](tabelle_fase1.md) e si rigenerano con
+Il piano e il calendario sono in [`PIANO.md`](PIANO.md). Le tabelle complete sono in [`tabelle_fase1.md`](tabelle_fase1.md) e si rigenerano con
 `python3 fase1_storico.py`. Per leggerle: il ROI è il guadagno medio per euro puntato. Tra parentesi quadre
 c'è l'intervallo al 95%: se comprende lo zero, il risultato non si distingue dal caso. Il CLV è di quanto la
 quota presa batte la quota giusta di chiusura; è l'indicatore più affidabile, perché ha molto meno rumore del
