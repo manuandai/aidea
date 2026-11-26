@@ -81,3 +81,20 @@ precise ("informazione tardiva" 4,5‰ contro 2,2‰ della Serie A).
 - **Serie B e bookmaker italiani sono il terreno più promettente** da verificare dal vivo: è il campionato che
   si muove di più, dove l'exchange è meno liquido e dove i bookmaker italiani, che football-data non copre,
   potrebbero essere i più lenti.
+
+## Fase 2: primi controlli, senza account (26 novembre 2026)
+
+Controllo di raggiungibilità dall'ambiente cloud in cui lavoro (server fuori dall'Italia):
+
+| Fonte | Esito | Significato |
+|---|---|---|
+| The Odds API | risponde (chiede la chiave) | usabile dal cloud |
+| OddsPapi | risponde | usabile dal cloud |
+| API-Football | risponde (chiede la chiave) | usabile dal cloud |
+| Betfair.it (login) | bloccato da Cloudflare | probabile blocco per paese o per server |
+| Eurobet, Goldbet | pagina anti-bot di Cloudflare | lettura automatica bloccata dal cloud |
+| Snai, Sisal | connessione chiusa | come sopra |
+
+Conseguenza per l'architettura: Betfair.it e i bookmaker italiani vanno letti da una connessione italiana
+domestica, cioè dal computer dell'utente o da un dispositivo a casa sua. Le API a pagamento o gratuite dei
+fornitori possono invece girare nel cloud.
